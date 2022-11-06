@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 To do List </title>
+    <link rel="stylesheet" href="./01index.css">
+    <script src="./01index.js" defer></script>
+</head>
+<body>   
+        <!--头顶To do List框-->
+        <div class="topBox">
+            <h1>To do List</h1>
+                <div>
+                    <input type="text" class="todoList">
+                    <button class="btn">Add</button>
+                </div>
+            <hr size="2px" width="500px" color="blue" >
+        </div>
+
+    <!--正在完成的任务-->
+        <div class="doingBody" id="doingBody">
+            <ul class="doingList" id="goodsList">
+
+            </ul>
+        </div>
+
+    <!--已经完成的任务-->
+        <div class="doneBody" id="doneBody">
+            <ul class="doneList" id="doneList">
+        
+            </ul>
+        </div>
+
+    <!--动态添加DOM元素创建List-->
+</body>
+</html>

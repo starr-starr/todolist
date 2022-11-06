@@ -1,0 +1,17 @@
+.topBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.todoList{
+    position: relative;
+    left: 22px; ;
+}
+.btn{
+    position: relative;
+    left: 44px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
