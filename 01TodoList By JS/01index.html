@@ -6,33 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>01 To do List </title>
     <link rel="stylesheet" href="./01index.css">
-    <script src="./01index.js" defer></script>
+    
 </head>
 <body>   
         <!--头顶To do List框-->
         <div class="topBox">
             <h1>To do List</h1>
                 <div>
-                    <input type="text" class="todoList">
+                    <input type="text" class="todoList" id="todoList" >
                     <button class="btn">Add</button>
                 </div>
             <hr size="2px" width="500px" color="blue" >
         </div>
-
     <!--正在完成的任务-->
         <div class="doingBody" id="doingBody">
-            <ul class="doingList" id="goodsList">
+            <h2>待办事项</h2>
+                <ul class="doingList" id="doingList">
 
-            </ul>
+                </ul>
         </div>
 
     <!--已经完成的任务-->
         <div class="doneBody" id="doneBody">
-            <ul class="doneList" id="doneList">
+            <h2>已完事项</h2>
+                <ul class="doneList" id="doneList">
         
-            </ul>
+                </ul>
         </div>
 
     <!--动态添加DOM元素创建List-->
+    <script src="./01index.js"></script>
 </body>
 </html>
