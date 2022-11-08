@@ -2,12 +2,12 @@ let todoList = document.getElementById('todoList')
 let doingList = document.getElementById('doingList')
 const doneList = document.getElementById('doneList')
 const add = document.querySelector('button')
-//const btn = document.querySelectorAll('button')
-//let task = document.createElement('li')
 
 
 add.addEventListener('click',addTask)
 function addTask(){
+
+    //增加操作
     let task = document.createElement('li')
     let allLi = document.getElementsByTagName('li')
     task.className = "task-item"
@@ -15,16 +15,47 @@ function addTask(){
     '<span>' + todoList.value + '</span>' + '<button class="del">' + '</button>' 
     //console.log(task);
     doingList.insertBefore(task,allLi[0])
-}
-//console.log(btn);
-    window.btn = document.querySelectorAll('button')
+    
+    
+    //删除操作 
+    let btn = document.querySelectorAll('button')
     for(var i = 1;i<btn.length;i++){
-    btn[i].addEventListener('click',delTask)
-}
-function delTask(){ 
-    console.log(btn);
+    btn[i].addEventListener('click',function(){
+         doingList.removeChild(this.parentNode)
+         //window.location.reload();
+    })}
+
+
+    //事件迁移
+    let checkBoxs = document.getElementsByName('checkVal')
+    for(var i = 0;i<checkBoxs.length;i++){
+        checkBoxs[i].addEventListener('change', function() {
+            //let parentLi = event.target.parentNode
+            //parentLi.style.textDecoration = 'line-through'
+           
+            //console.log(doneTask);
+            let doneTaskList = document.createElement('p')
+            let allP = document.getElementsByTagName('p')
+            doneTaskList.innerText = task.innerText
+            doneTaskList.style.textDecoration = 'line-through' 
+            //doneTaskList = parentLi.innerText = task.innerText 
+            console.log(allP[i]);
+            doneList.insertBefore(doneTaskList,allP[i])
+            for(var i = 1;i<btn.length;i++){
+                btn[i].addEventListener('click',function(){
+                     doingList.removeChild(this.parentNode)
+                })}
+            //doingList.removeChild(btn[i+1].parentNode)
+        //     let parentLi = event.target.parentNode
+        //     parentLi.removeChild(parentLi,this.children[i])
+        // }
+        
+    })
 }
 
+
+
+}
 
 
 // let checkBoxs = document.getElementsByName('checkVal')
