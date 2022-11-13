@@ -11,8 +11,10 @@ function addTask(){
     let task = document.createElement('li')
     let allLi = document.getElementsByTagName('li')
     task.className = "task-item"
-    task.innerHTML = '<input type = "checkbox" name="checkVal" value=' + todoList.value + ' />' +
-    '<span>' + todoList.value + '</span>' + '<button class="del">' + '</button>' 
+    for(let k = 0;k < allLi.length;k++){
+    task.innerHTML = '<input type = "checkbox" name="checkVal" data-index='+ k +' />' +
+    '<span>' + todoList.value + '</span>' + '<button class="del">' + '</button>'} 
+    // k后面： + 'value=' + todoList.value 
     //console.log(task);
     doingList.insertBefore(task,allLi[0])
     
@@ -34,22 +36,23 @@ function addTask(){
             //parentLi.style.textDecoration = 'line-through'
            
             //console.log(doneTask);
+            //console.log(allLi[0]);
+            //for(var i = checkBoxs.length;i==0;i--){
+            var id = allLi[i].childNodes[0].getAttribute('data-index')
+        //}
+            console.log(id);
             let doneTaskList = document.createElement('p')
             let allP = document.getElementsByTagName('p')
+
             doneTaskList.innerText = task.innerText
-            doneTaskList.style.textDecoration = 'line-through' 
-            //doneTaskList = parentLi.innerText = task.innerText 
-            console.log(allP[i]);
-            doneList.insertBefore(doneTaskList,allP[i])
-            for(var i = 1;i<btn.length;i++){
-                btn[i].addEventListener('click',function(){
-                     doingList.removeChild(this.parentNode)
-                })}
-            //doingList.removeChild(btn[i+1].parentNode)
-        //     let parentLi = event.target.parentNode
-        //     parentLi.removeChild(parentLi,this.children[i])
-        // }
-        
+            doneTaskList.style.textDecoration = 'line-through'
+            if(id == i+1){
+            doneList.insertBefore(doneTaskList,allP[0])
+        }
+            // for(var i = 1;i<btn.length;i++){
+            //     btn[i].addEventListener('click',function(){
+            //          doingList.removeChild(this.parentNode)
+            //     })}
     })
 }
 

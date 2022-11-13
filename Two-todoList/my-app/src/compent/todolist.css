@@ -1,0 +1,36 @@
+hr{
+    width: 770px;
+}
+li{
+    list-style: none   ;
+}
+h2{
+    color: green;
+}
+.topBox{
+    text-align:  center;
+}
+/* 子绝父相定位*/
+.doingBox,
+.doneBox{
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+
+}
+.deleteAllbtn{
+    position: absolute;
+    top: 2.7em;
+    right:25em;
+}
+
+.no-thing{
+    font-size: larger;
+    color: lightblue ;
+    
+}
+
+
+  
