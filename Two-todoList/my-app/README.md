@@ -1,7 +1,8 @@
 #React完成的Todolist<hr>
 1.这是我于2022.11.13初步学习完React后做出的Todolist，包含增加待办事项、勾选实现未完到已完、删除所有待办事项<br>
 2.在组件方面，我将实现所有功能的方法放在了同一个组件中，从而避免了繁琐的组件之间的通讯（其实是因为懒）；等以后学精通了再回头来拆分各个方法并借此锻炼组件之间的通讯<br>
-3.通过写这个todolist，复习到了对数组中元素的一些操作：<br>
+3.解构赋值，当一个量用到多次时，这样可以少写一些...<br>
+4.通过写这个todolist，复习到了对数组中元素的一些操作：<br>
   >1>.split:<br>
   >>str.split([separator [, limit] ])<br>
   >>其中separator指拆分标志，limit是一个整数，限定返回的分割片段数量，返回以数组形式返回<br>
@@ -13,4 +14,4 @@
   >3>.filter:<br>
   >>较多，如下：<br>
   >>https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter<br>
->4.解构赋值，当一个量用到多次时，这样可以少写一些...
+
